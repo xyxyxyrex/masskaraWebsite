@@ -49,11 +49,30 @@ body {
 }
 
 .touristSpots {
-  margin: 5% 0 5% 0;
+  margin: 1% 0 1% 0;
   display: flex;
-  overflow-y: scroll;
+  overflow-x: scroll;
+  scrollbar-gutter: stable;
+  transition: all 0.2s;
+  transform: scale(0.98);
+  will-change: transform;
+  user-select: none;
+  cursor: pointer;
+  overflow-y: hidden;
 }
+.touristSpots::-webkit-scrollbar {
+  display: none;
+}
+
+.touristSpots.active {
+  background: rgba(255, 255, 255, 0.3);
+  cursor: grabbing;
+  cursor: -webkit-grabbing;
+  transform: scale(1);
+}
+
 .touristSpots img {
+  padding: 5%;
   height: 50vh;
   width: 50vh;
   object-fit: cover;
@@ -61,7 +80,31 @@ body {
   z-index: 99;
   padding-right: 5%;
 }
+#touristSpot {
+  height: auto;
+}
+#touristSpot:hover {
+  transform: scale(1.05);
+  transition: 0.5s;
+}
 
 iframe {
   padding-top: 5%;
+}
+
+.carousel-fade {
+  display: block;
+  opacity: 0;
+  transition: opacity ease-out 0.7s;
+}
+
+.carousel-fade {
+  opacity: 1 !important;
+}
+
+.parent {
+  width: 300px;
+  border: 5px solid red;
+  overflow: hidden;
+  left: 20px;
 }
