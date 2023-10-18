@@ -12,9 +12,11 @@ body {
   display: flex;
   justify-content: space-between;
 }
+
 .navBar li {
   padding: 0 5%;
 }
+
 .navBar .leftSection {
   height: 2rem;
   width: 49%;
@@ -24,6 +26,7 @@ body {
   float: right;
   width: 49%;
 }
+
 .leftSection img {
   height: 10vh;
 }
@@ -44,6 +47,7 @@ body {
 .carousel-item {
   height: 70vh;
 }
+
 .carousel-item img {
   object-fit: fill;
 }
@@ -60,6 +64,7 @@ body {
   cursor: pointer;
   overflow-y: hidden;
 }
+
 .touristSpots::-webkit-scrollbar {
   display: none;
 }
@@ -73,23 +78,32 @@ body {
 
 .touristSpots img {
   padding: 5%;
-  height: 50vh;
-  width: 50vh;
+  height: 30vh;
+  width: 30vh;
   object-fit: cover;
   border-radius: 50%;
-  z-index: 99;
   padding-right: 5%;
 }
+
 #touristSpot {
   height: auto;
+  position: relative;
 }
+
+#touristSpotimg {
+  z-index: 99;
+}
+
 #touristSpot:hover {
   transform: scale(1.05);
   transition: 0.5s;
 }
 
-iframe {
-  padding-top: 5%;
+#touristSpotmap {
+  z-index: -1;
+  border-radius: 50%;
+  height: 50vh;
+  width: 50vh;
 }
 
 .carousel-fade {
