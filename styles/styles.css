@@ -2,6 +2,7 @@ body {
   margin: 0;
 }
 
+/* ----------navBar---------------- */
 .navBar {
   background: #faff00;
   width: 100%;
@@ -44,6 +45,8 @@ body {
   height: 30vh;
 }
 
+
+/* -----------carousel----------- */
 .carousel-item {
   height: 70vh;
 }
@@ -52,6 +55,19 @@ body {
   object-fit: fill;
 }
 
+.carousel-fade {
+  display: block;
+  opacity: 0;
+  transition: opacity ease-in-out 0.9s;
+}
+
+.carousel-fade {
+  opacity: 1 !important;
+}
+
+
+
+/* ----------touristSpots------------------ */
 .touristSpots {
   margin: 4% 0 1% 0;
   display: flex;
@@ -66,7 +82,7 @@ body {
 }
 
 .touristspot-title {
-  margin: 2% 45%;
+  margin: 0% 45%;
   position: absolute;
 }
 
@@ -98,7 +114,7 @@ body {
 
 .touristSpots h1 {
   margin: 0 25%;
-  margin-top: 10%;
+  margin-top: 20%;
 }
 
 #touristSpot:hover {
@@ -116,21 +132,82 @@ body {
   padding-right: 5%;
 }
 
-.carousel-fade {
-  display: block;
-  opacity: 0;
-  transition: opacity ease-out 0.7s;
-}
-
-.carousel-fade {
-  opacity: 1 !important;
-}
-
 .parent {
   width: 300px;
   border: 5px solid red;
   overflow: hidden;
   left: 20px;
+}
+
+/* -----------eventLocations---------- */
+.eventLocations {
+  margin: 5% 0;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.event p {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.event img {
+  width: 100%;
+  height: 100%;
+  transition: 0.5s ease-in-out;
+}
+
+.event {
+  transition: 0.5s ease-in-out;
+  filter: saturate(0);
+  position: relative;
+
+}
+
+.event:hover {
+  overflow: hidden;
+  transform: scale(1.04);
+  filter: saturate(1);
+  transition: 0.5s ease-in-out;
+}
+
+.event video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none;
+  border-radius: 10px;
+}
+
+/* ------------------highlights------------------ */
+.highlights-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.highlights {
+  margin: 5%;
+}
+
+
+.highlights img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.highlights-text {
+  padding: 5%;
+  background-color: beige;
 }
 
 /* --------------------footer------------------------- */
