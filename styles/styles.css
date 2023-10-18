@@ -77,12 +77,13 @@ body {
 }
 
 .touristSpots img {
-  padding: 5%;
-  height: 30vh;
-  width: 30vh;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  height: 20vh;
+  width: 20vh;
   object-fit: cover;
   border-radius: 50%;
-  bottom: 10vh;
 }
 
 #touristSpot {
@@ -95,16 +96,14 @@ body {
   transition: 0.5s;
 }
 
-#touristSpotimg {
-  bottom: 20vh;
-}
 
 #touristSpotmap {
-  z-index: -1;
   border-radius: 50%;
   height: 50vh;
   width: 50vh;
-  padding: 5%;
+  padding-left: 5%;
+  padding-top: 5%;
+  padding-right: 5%;
 }
 
 .carousel-fade {
