@@ -82,7 +82,7 @@ body {
   width: 30vh;
   object-fit: cover;
   border-radius: 50%;
-  padding-right: 5%;
+  bottom: 10vh;
 }
 
 #touristSpot {
@@ -90,13 +90,13 @@ body {
   position: relative;
 }
 
-#touristSpotimg {
-  z-index: 99;
-}
-
 #touristSpot:hover {
   transform: scale(1.05);
   transition: 0.5s;
+}
+
+#touristSpotimg {
+  bottom: 20vh;
 }
 
 #touristSpotmap {
@@ -104,7 +104,7 @@ body {
   border-radius: 50%;
   height: 50vh;
   width: 50vh;
-  top: 50vh;
+  padding: 5%;
 }
 
 .carousel-fade {
