@@ -2,7 +2,12 @@
 <html lang="en">
 
 <head>
-
+  <link rel="icon" href="logo.png" type="image/x-icon">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/Flip.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/CustomEase.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
   <script src="https://code.jquery.com/jquery-migrate-3.4.1.js"></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -20,22 +25,30 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Masskara 2023: Sinadya sa Bacolod!</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+
 </head>
 
 <body>
-  <div class="navBar">
+
+  <!-- ---------------navBar---------------------- -->
+  <div id="navBar" class="navBar">
     <div class="leftSection">
-      <a href=""><img src="assets/masskaraLogo.png" alt=""></a>
+      <a href="" class="link logo"><img src="assets/logoWithName.png" alt=""></a>
     </div>
     <div class="rightSection">
-      <ul>
-        <li>Home</li>
-        <li>About</li>
-        <li>Masskara2k23</li>
+      <ul id="navBarList">
+        <li class="li link">Home</li>
+        <li class="li link">About</li>
+        <li class="li link">Masskara2023</li>
       </ul>
     </div>
   </div>
 
+  <script src="scripts/navBarGsap.js"></script>
+  <script src="scripts/navbarScript.js"></script>
+
+  <!-- ------------------videotheme------------------ -->
 
   <section>
     <div class="videoTheme">
@@ -45,60 +58,208 @@
     </div>
   </section>
 
+  <!-- --------------paragraphContent----------------------- -->
+
   <section>
     <div class="paragraphContentMasskara">
       <h1>Lorem ipsum dolor sit amet.</h1>
-      <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, nam.</h3>
+      <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, nam. Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Aliquid dolore animi quas officia odio, quo adipisci sunt perspiciatis molestiae excepturi,
+        incidunt repudiandae quae eos blanditiis nihil dignissimos sapiente iste quos! Lorem ipsum dolor sit amet
+        consectetur, adipisicing elit. Dolores rerum odit perspiciatis cupiditate molestias et dolorem consequuntur sit
+        molestiae voluptatem? Iste ut odit culpa corporis sunt quibusdam a possimus commodi. Lorem ipsum dolor, sit amet
+        consectetur adipisicing elit. Assumenda accusantium perspiciatis officia fugit, aut pariatur quibusdam
+        voluptatem perferendis animi nam. Ab molestias eligendi non illo, sequi dignissimos deserunt est explicabo.</h3>
     </div>
   </section>
 
-  <section>
 
+  <!-- ----------------------carousel------------------------------ -->
 
-    <div id="carouselExampleFade" class="carousel slide carousel-fade">
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-          aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-          aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-          aria-label="Slide 3"></button>
+  <section class="hidden">
+
+    <div class="historyWrapper">
+      <div class="leftHistory">
+        <div id="wrapper">
+          <div class="section-info-container">
+            <div class="thumbnail-container"></div>
+            <div class="preview-container"></div>
+          </div>
+          <section class="section">
+            <div class="item-container">
+              <div class="item-shell big">
+                <div class="item">
+                  <img src="assets/history/history1.png" />
+                </div>
+              </div>
+              <div class="item-shell item-shell-2">
+                <div class="item">
+                  <img class="longHistory" src="assets/history/history2.png" />
+                </div>
+
+              </div>
+              <div class="item-shell horizontal">
+                <div class="item">
+                  <img src="assets/history/history3.png" />
+                </div>
+              </div>
+              <div class="item-shell horizontal">
+                <div class="item">
+                  <img src="assets/history/history4.png" />
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
       </div>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="assets/carousel1.jpg" class="d-block w-100" alt="...">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>First slide label</h5>
-            <p>Some representative placeholder content for the first slide.</p>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img src="assets/masskaraLogo.png" class="d-block w-100" alt="...">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>Second slide label</h5>
-            <p>Some representative placeholder content for the second slide.</p>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img src="assets/carousel1.jpg" class="d-block w-100" alt="...">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>Third slide label</h5>
-            <p>Some representative placeholder content for the third slide.</p>
-          </div>
-        </div>
+      <div class="rightHistory">
+        <p>Lorem ipsum dolor sit amet.</p>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
+
     </div>
   </section>
 
-  <section>
+  <script>
+    gsap.config({ trialWarn: false });
+
+    gsap.registerPlugin(Flip);
+
+    // grab our element
+    const itemShells = gsap.utils.toArray(".item-shell");
+    let previewContainer = document.querySelector(".preview-container");
+    let itemContainer = document.querySelector(".item-container");
+    let sectionContainer = document.querySelector(".section");
+    let thumbnailContainer = document.querySelector(".thumbnail-container");
+    let sectionInfoContainer = document.querySelector(".section-info-container");
+    let lastItemClicked, lastItemClickedShell;
+
+    let clickedItemShell;
+
+    function init() {
+      // gsap.set(sectionContainer, { scale: 0.7 });
+
+      gsap.set(".horizontal", { x: 50, rotate: -20 });
+      gsap.set(".horizontal-r", { x: -50, rotate: 20 });
+      gsap.set(".item-shell-2", { x: 70, y: 30, rotate: 15 });
+      gsap.set(".item-shell-5", { x: -50, y: 30, rotate: -15 });
+
+      itemShells.forEach((itemShell) => {
+        itemShell.addEventListener("click", (e) => {
+          let stateItemShells = Flip.getState(".item-shell");
+          let item = itemShell.querySelector(".item");
+          sectionInfoContainer.style.zIndex = 1;
+
+          //Setting clicked item in preview container
+          let itemState = Flip.getState(item);
+          previewContainer.appendChild(item);
+          Flip.from(itemState, {
+            duration: 1,
+            ease: "sine.in"
+          });
+
+          // Putback
+          if (lastItemClicked) {
+            let state = Flip.getState(lastItemClicked);
+            console.log("Inside putback. Previewed Item:", lastItemClicked);
+            lastItemClickedShell.appendChild(lastItemClicked);
+            Flip.from(state, {
+              duration: 1,
+              ease: "power1.inOut"
+            });
+          }
+          lastItemClicked = item;
+          lastItemClickedShell = itemShell;
+
+          //Setting all items in thumbnail container
+          let container = Flip.getState(itemContainer);
+          thumbnailContainer.appendChild(itemContainer);
+          Flip.from(container, {
+            duration: 1,
+            ease: "power1.inOut"
+          });
+
+          //Setting all items in the horizontal grid
+          gsap.set(
+            [".horizontal", ".horizontal-r", ".item-shell-2", ".item-shell-5"],
+            { x: 0, rotate: 0, y: 0 }
+          );
+          itemShells.forEach((itemShell) => {
+            itemShell.classList.remove(
+              "big"
+            );
+          });
+          itemContainer.classList.add("item-container--final");
+          Flip.from(stateItemShells, {
+            duration: 1,
+            ease: "power1.inOut"
+          });
+        });
+      });
+    }
+    function reverse() {
+      let stateItemShells = Flip.getState(".item-shell");
+      let previewedItemState = Flip.getState(lastItemClicked);
+      gsap.set(".horizontal", { x: 50, rotate: -20 });
+      gsap.set(".horizontal-r", { x: -50, rotate: 20 });
+      gsap.set(".item-shell-2", { x: 70, y: 30, rotate: 15 });
+      gsap.set(".item-shell-5", { x: -50, y: 30, rotate: -15 });
+
+      itemShells[0].classList.add('big');
+      itemContainer.classList.remove("item-container--final");
+      Flip.from(stateItemShells, {
+        duration: 1,
+        ease: "power1.inOut"
+      });
+      let item = Flip.getState(itemContainer);
+      sectionContainer.append(itemContainer);
+      Flip.from(item, {
+        duration: 0.5,
+        ease: "power1.inOut"
+      });
+
+      console.log("Inside reverse. Previewed Item:", lastItemClicked);
+      lastItemClickedShell.append(lastItemClicked);
+      Flip.from(previewedItemState, {
+        duration: 1,
+        ease: "power1.inOut",
+      });
+      sectionInfoContainer.style.zIndex = -1;
+      lastItemClicked = null;
+      lastItemClickedShell = null;
+    }
+
+
+
+    window.addEventListener("load", init());
+    window.addEventListener(
+      "keydown",
+      function (event) {
+        if (event.defaultPrevented) {
+          return; // Do nothing if the event was already processed
+        }
+
+        switch (event.key) {
+          case "Esc": // IE/Edge specific value
+          case "Escape":
+            reverse();
+            // Do something for "esc" key press.
+            break;
+          default:
+            return; // Quit when this doesn't handle the key event.
+        }
+
+        // Cancel the default action to avoid it being handled twice
+        event.preventDefault();
+      },
+      true
+    );
+
+
+  </script>
+
+
+  <!-- -------------------touristSpots---------------------- -->
+  <section class="hidden right">
     <div class="touristspot-title">
       <h1>LOCATION</h1>
     </div>
@@ -106,335 +267,320 @@
     <div class="touristSpots">
 
       <div id="touristSpot" class="touristSpot1">
-        <h1>LOCATION 1</h1>
+        <h1>The Ruins</h1>
         <iframe class="touristSpotmap" id="touristSpotmap"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3920.3264771287513!2d122.97998541071688!3d10.709282160384348!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33aed150d6aa49e1%3A0x479285d8b2b5242f!2sThe%20Ruins!5e0!3m2!1sen!2sph!4v1697300626869!5m2!1sen!2sph"
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3920.33261548174!2d122.98197024964824!3d10.708807782028169!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33aed150d6aa49e1%3A0x479285d8b2b5242f!2sThe%20Ruins!5e0!3m2!1sen!2sph!4v1697693681647!5m2!1sen!2sph"
           width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <img src="assets/carousel1.jpg" alt="" id="touristSpotimg">
-
+        <img src="assets/tourist-attractions/ruins.jpg" alt="" id="touristSpotimg">
       </div>
+
       <div id="touristSpot" class="touristSpot2">
-        <h1>LOCATION 1</h1>
+        <h1>The Lagoon</h1>
         <iframe class="touristSpotmap" id="touristSpotmap"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3920.3264771287513!2d122.97998541071688!3d10.709282160384348!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33aed150d6aa49e1%3A0x479285d8b2b5242f!2sThe%20Ruins!5e0!3m2!1sen!2sph!4v1697300626869!5m2!1sen!2sph"
-          width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3920.757684159672!2d122.95005953615488!3d10.675907358202105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33aed1a92ad6ddbb%3A0x10315cc01eaf3bf9!2sLagoon!5e0!3m2!1sen!2sph!4v1697693770062!5m2!1sen!2sph"
+          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <img src="assets/carousel1.jpg" alt="" id="touristSpotimg">
+        <img src="assets/tourist-attractions/lagoon.jpg" alt="" id="touristSpotimg">
       </div>
+
       <div id="touristSpot" class="touristSpot3">
-        <h1>LOCATION 1</h1>
+        <h1>San Sebastian Cathedral</h1>
         <iframe class="touristSpotmap" id="touristSpotmap"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3920.3264771287513!2d122.97998541071688!3d10.709282160384348!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33aed150d6aa49e1%3A0x479285d8b2b5242f!2sThe%20Ruins!5e0!3m2!1sen!2sph!4v1697300626869!5m2!1sen!2sph"
-          width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15683.334766174108!2d122.9469509!3d10.6700138!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33aed1b11a359879%3A0xb75744948d4badc9!2sSan%20Sebastian%20Cathedral!5e0!3m2!1sen!2sph!4v1697693793918!5m2!1sen!2sph"
+          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <img src="assets/carousel1.jpg" alt="" id="touristSpotimg">
+        <img src="assets/tourist-attractions/church.jpg" alt="" id="touristSpotimg">
       </div>
+
       <div id="touristSpot" class="touristSpot4">
-        <h1>LOCATION 1</h1>
+        <h1>The Bacolod Museum</h1>
         <iframe class="touristSpotmap" id="touristSpotmap"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3920.3264771287513!2d122.97998541071688!3d10.709282160384348!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33aed150d6aa49e1%3A0x479285d8b2b5242f!2sThe%20Ruins!5e0!3m2!1sen!2sph!4v1697300626869!5m2!1sen!2sph"
-          width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125443.2133802428!2d122.90545430405261!3d10.726737794646803!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33aed1aebc598b8f%3A0x99a94cfb135343d9!2sThe%20Negros%20Museum!5e0!3m2!1sen!2sph!4v1697693837821!5m2!1sen!2sph"
+          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <img src="assets/carousel1.jpg" alt="" id="touristSpotimg">
+        <img src="assets/tourist-attractions/museum.jpg" alt="" id="touristSpotimg">
       </div>
+
       <div id="touristSpot" class="touristSpot5">
-        <h1>LOCATION 1</h1>
+        <h1>Jojo Vito Designs</h1>
         <iframe class="touristSpotmap" id="touristSpotmap"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3920.3264771287513!2d122.97998541071688!3d10.709282160384348!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33aed150d6aa49e1%3A0x479285d8b2b5242f!2sThe%20Ruins!5e0!3m2!1sen!2sph!4v1697300626869!5m2!1sen!2sph"
-          width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15683.838599003882!2d122.9433388!3d10.66024!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33aed0351db7cfc9%3A0x7abf93285f40b46f!2sJojo%20Vito%20Designs%20Gallery!5e0!3m2!1sen!2sph!4v1697693863663!5m2!1sen!2sph"
+          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <img src="assets/carousel1.jpg" alt="" id="touristSpotimg">
+        <img src="assets/tourist-attractions/jojo-vito.jpg" alt="" id="touristSpotimg">
       </div>
+
       <div id="touristSpot" class="touristSpot6">
-        <h1>LOCATION 1</h1>
+        <h1>Mambukal Mountain Resort</h1>
         <iframe class="touristSpotmap" id="touristSpotmap"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3920.3264771287513!2d122.97998541071688!3d10.709282160384348!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33aed150d6aa49e1%3A0x479285d8b2b5242f!2sThe%20Ruins!5e0!3m2!1sen!2sph!4v1697300626869!5m2!1sen!2sph"
-          width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d250886.4537298145!2d122.82304344049989!3d10.72670528177868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33aeb3f4e93b73ed%3A0x313ee6d4c0c44976!2sMambukal%20Mountain%20Resort!5e0!3m2!1sen!2sph!4v1697693910766!5m2!1sen!2sph"
+          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <img src="assets/carousel1.jpg" alt="" id="touristSpotimg">
+        <img src="assets/tourist-attractions/mambukal.jpg" alt="" id="touristSpotimg">
       </div>
+
       <div id="touristSpot" class="touristSpot7">
-        <h1>LOCATION 1</h1>
+        <h1>Panaad Stadium</h1>
         <iframe class="touristSpotmap" id="touristSpotmap"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3920.3264771287513!2d122.97998541071688!3d10.709282160384348!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33aed150d6aa49e1%3A0x479285d8b2b5242f!2sThe%20Ruins!5e0!3m2!1sen!2sph!4v1697300626869!5m2!1sen!2sph"
-          width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15685.635327645765!2d122.9644782!3d10.6253131!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33aece3e12f91b99%3A0xc2099f401968e5b5!2sPana-ad!5e0!3m2!1sen!2sph!4v1697694139621!5m2!1sen!2sph"
+          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <img src="assets/carousel1.jpg" alt="" id="touristSpotimg">
+        <img src="assets/tourist-attractions/panaad.jpg" alt="" id="touristSpotimg">
       </div>
+
       <div id="touristSpot" class="touristSpot8">
-        <h1>LOCATION 1</h1>
+        <h1>Campuestohan Highland resort</h1>
         <iframe class="touristSpotmap" id="touristSpotmap"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3920.3264771287513!2d122.97998541071688!3d10.709282160384348!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33aed150d6aa49e1%3A0x479285d8b2b5242f!2sThe%20Ruins!5e0!3m2!1sen!2sph!4v1697300626869!5m2!1sen!2sph"
-          width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15683.820569770485!2d123.1447264!3d10.6605899!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a92c4ba1ce69ed%3A0x4b2ac8847d84f65e!2sCampuestohan%20Highland%20Resort!5e0!3m2!1sen!2sph!4v1697694173317!5m2!1sen!2sph"
+          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <img src="assets/carousel1.jpg" alt="" id="touristSpotimg">
+        <img src="assets/tourist-attractions/campuestohan.jpg" alt="" id="touristSpotimg">
       </div>
-      <div id="touristSpot" class="touristSpot9">
-        <h1>LOCATION 1</h1>
-        <iframe class="touristSpotmap" id="touristSpotmap"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3920.3264771287513!2d122.97998541071688!3d10.709282160384348!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33aed150d6aa49e1%3A0x479285d8b2b5242f!2sThe%20Ruins!5e0!3m2!1sen!2sph!4v1697300626869!5m2!1sen!2sph"
-          width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <img src="assets/carousel1.jpg" alt="" id="touristSpotimg">
+
+      <script src="scripts/scrolltouristSpotScript.js"></script>
+
+  </section>
+
+  <script src="scripts/touristSpotAnim.js"></script>
+
+  <!-- ------------------eventLocations--------------------- -->
+  <section class="hidden">
+    <div class="event-container">
+      <div class="event-title">
+        <h1>EVENTS</h1>
+      </div>
+      <div class="eventLocations">
+        <div class="event" onmouseover="playVideo(this)" onmouseout="pauseVideo(this)">
+          <p class="textEvent">Lorem ipsum dolor sit amet.</p>
+          <img class="imgEvent" src="assets/events/images/ayala.png" alt="">
+          <video class="videoEvent" src="assets/events/videos/ayala.mp4"></video>
+        </div>
+
+        <div class="event" onmouseover="playVideo(this)" onmouseout="pauseVideo(this)">
+          <p class="textEvent">Lorem ipsum dolor sit amet.</p>
+          <img class="imgEvent" src="assets/events/images/lacson.png" alt="">
+          <video class="videoEvent" src="assets/events/videos/lacson.mp4"></video>
+        </div>
+
+        <div class="event" onmouseover="playVideo(this)" onmouseout="pauseVideo(this)">
+          <p class="textEvent">Lorem ipsum dolor sit amet.</p>
+          <img class="imgEvent" src="assets/events/images/megaworld.png" alt="">
+          <video class="videoEvent" src="assets/events/videos/megaworld.mp4"></video>
+        </div>
+
+        <div class="event" onmouseover="playVideo(this)" onmouseout="pauseVideo(this)">
+          <p class="textEvent">Lorem ipsum dolor sit amet.</p>
+          <img class="imgEvent" src="assets/events/images/ngc.png" alt="">
+          <video class="videoEvent" src="assets/events/videos/ngc.mp4"></video>
+        </div>
+
+        <div class="event" onmouseover="playVideo(this)" onmouseout="pauseVideo(this)">
+          <p class="textEvent">Lorem ipsum dolor sit amet.</p>
+          <img class="imgEvent" src="assets/events/images/plaza.png" alt="">
+          <video class="videoEvent" src="assets/events/videos/plaza.mp4"></video>
+        </div>
+
+        <div class="event" onmouseover="playVideo(this)" onmouseout="pauseVideo(this)">
+          <p class="textEvent">Lorem ipsum dolor sit amet.</p>
+          <img class="imgEvent" src="assets/events/images/sm.png" alt="">
+          <video class="videoEvent" src="assets/events/videos/sm.mp4"></video>
+        </div>
+
+        <div class="event" onmouseover="playVideo(this)" onmouseout="pauseVideo(this)">
+          <p class="textEvent">Lorem ipsum dolor sit amet.</p>
+          <img class="imgEvent" src="assets/events/images/airport-1.png" alt="">
+          <video class="videoEvent" src="assets/events/videos/airport-1.mp4"></video>
+        </div>
+
+        <div class="event" onmouseover="playVideo(this)" onmouseout="pauseVideo(this)">
+          <p class="textEvent">Lorem ipsum dolor sit amet.</p>
+          <img class="imgEvent" src="assets/events/images/airport-2.png" alt="">
+          <video class="videoEvent" src="assets/events/videos/airport-2.mp4"></video>
+        </div>
+
+        <script src="scripts/eventLocations.js"></script>
       </div>
     </div>
   </section>
 
-  <div class="eventLocations">
+  <!-- ----------------highlights------------------ -->
+  <section class="hidden">
+    <div class="highlights-section">
+      <div class="highlights-title">
+        <h1>HIGHLIGHTS</h1>
+      </div>
+      <div class="highlights-container">
 
-    <div class="event" onmouseover="playVideo(this)" onmouseout="pauseVideo(this)">
-      <p class="textEvent">Lorem ipsum dolor sit amet.</p>
-      <img class="imgEvent" src="assets/carousel1.jpg" alt="">
-      <video class="videoEvent" src="assets/masskara.mp4"></video>
-
-    </div>
-
-    <div class="event" onmouseover="playVideo(this)" onmouseout="pauseVideo(this)">
-      <p class="textEvent">Lorem ipsum dolor sit amet.</p>
-      <img class="imgEvent" src="assets/carousel1.jpg" alt="">
-      <video class="videoEvent" src="assets/masskara.mp4"></video>
-    </div>
-
-    <div class="event" onmouseover="playVideo(this)" onmouseout="pauseVideo(this)">
-      <p class="textEvent">Lorem ipsum dolor sit amet.</p>
-      <img class="imgEvent" src="assets/carousel1.jpg" alt="">
-      <video class="videoEvent" src="assets/masskara.mp4"></video>
-    </div>
-
-    <div class="event" onmouseover="playVideo(this)" onmouseout="pauseVideo(this)">
-      <p class="textEvent">Lorem ipsum dolor sit amet.</p>
-      <img class="imgEvent" src="assets/carousel1.jpg" alt="">
-      <video class="videoEvent" src="assets/masskara.mp4"></video>
-    </div>
-
-    <div class="event" onmouseover="playVideo(this)" onmouseout="pauseVideo(this)">
-      <p class="textEvent">Lorem ipsum dolor sit amet.</p>
-      <img class="imgEvent" src="assets/carousel1.jpg" alt="">
-      <video class="videoEvent" src="assets/masskara.mp4"></video>
-    </div>
-
-    <div class="event" onmouseover="playVideo(this)" onmouseout="pauseVideo(this)">
-      <p class="textEvent">Lorem ipsum dolor sit amet.</p>
-      <img class="imgEvent" src="assets/carousel1.jpg" alt="">
-      <video class="videoEvent" src="assets/masskara.mp4"></video>
-    </div>
-
-    <div class="event" onmouseover="playVideo(this)" onmouseout="pauseVideo(this)">
-      <p class="textEvent">Lorem ipsum dolor sit amet.</p>
-      <img class="imgEvent" src="assets/carousel1.jpg" alt="">
-      <video class="videoEvent" src="assets/masskara.mp4"></video>
-    </div>
-
-    <div class="event" onmouseover="playVideo(this)" onmouseout="pauseVideo(this)">
-      <p class="textEvent">Lorem ipsum dolor sit amet.</p>
-      <img class="imgEvent" src="assets/carousel1.jpg" alt="">
-      <video class="videoEvent" src="assets/masskara.mp4"></video>
-    </div>
-
-  </div>
-
-  <script>
-    function playVideo(element) {
-      var img = element.querySelector('.imgEvent');
-      var video = element.querySelector('.videoEvent');
-      var text = element.querySelector('.textEvent')
-
-      img.style.display = 'none';
-      video.style.display = 'block';
-      text.style.display = 'none';
-      video.play();
-    }
-
-    function pauseVideo(element) {
-      var img = element.querySelector('.imgEvent');
-      var video = element.querySelector('.videoEvent');
-      var text = element.querySelector('.textEvent')
-
-      img.style.display = 'block';
-      video.style.display = 'none';
-      text.style.display = 'block';
-      video.pause();
-    }
-  </script>
-
-  <section>
-    <div class="highlights-container">
-
-      <div class="highlights">
-        <div class="highlights-image">
-          <img src="assets/carousel1.jpg" alt="">
+        <div class="highlights">
+          <div class="highlights-image">
+            <img src="assets/highlights/ball.jpg" alt="">
+          </div>
+          <div class="highlights-text">
+            <h5>Into the K-Fever with MassKara Festival 2023</h5>
+            <p>Lorem ipsum dolor sitddasd, amet consectetur adipisicing elit. Eum vel facere dolore minima odio
+              pariatur
+              quidem,
+              reprehenderit nihil modsasdasdadsadasasdllitia. Quis possimus ad consequatur adipisci labore doloremque
+              suscipit laudantium
+              exercitationem quisqasdasddasasdasduam!</p>
+          </div>
         </div>
-        <div class="highlights-text">
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum vel facere dolore minima odio pariatur
-            quidem,
-            reprehenderit nihil mollitia. Quis possimus ad consequatur adipisci labore doloremque suscipit laudantium
-            exercitationem quisquam!</p>
+
+        <div class="highlights">
+
+          <div class="highlights-image">
+            <img src="assets/highlights/billiard.jpg" alt="">
+          </div>
+          <div class="highlights-text">
+            <h5>Highlight Name</h5>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum vel facere dolore minima odio pariatur
+              quidem,
+              reprehenderit nihil mollitia. Quis possimus ad consequatur adipisci labore doloremque suscipit
+              laudantium
+              exercitationem quisquam!</p>
+          </div>
+        </div>
+
+        <div class="highlights">
+
+          <div class="highlights-image">
+            <img src="assets/highlights/cosmic.jpg" alt="">
+          </div>
+          <div class="highlights-text">
+            <h5>Highlight Name</h5>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum vel facere dolore minima odio pariatur
+              quidem,
+              reprehenderit nihil mollitia. Quis possimus ad consequatur adipisci labore doloremque suscipit
+              laudantium
+              exercitationem quisquam!</p>
+          </div>
+        </div>
+
+        <div class="highlights">
+
+          <div class="highlights-image">
+            <img src="assets/highlights/culinary.jpg" alt="">
+          </div>
+          <div class="highlights-text">
+            <h5>Highlight Name</h5>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum vel facere dolore minima odio pariatur
+              quidem,
+              reprehenderit nihil mollitia. Quis possimus ad consequatur adipisci labore doloremque suscipit
+              laudantium
+              exercitationem quisquam!</p>
+          </div>
+        </div>
+
+        <div class="highlights">
+
+          <div class="highlights-image">
+            <img src="assets/highlights/electric.jpg" alt="">
+          </div>
+          <div class="highlights-text">
+            <h5>Highlight Name</h5>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum vel facere dolore minima odio pariatur
+              quidem,
+              reprehenderit nihil mollitia. Quis possimus ad consequatur adipisci labore doloremque suscipit
+              laudantium
+              exercitationem quisquam!</p>
+          </div>
+        </div>
+
+        <div class="highlights">
+
+          <div class="highlights-image">
+            <img src="assets/highlights/food.jpg" alt="">
+          </div>
+          <div class="highlights-text">
+            <h5>Highlight Name</h5>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum vel facere dolore minima odio pariatur
+              quidem,
+              reprehenderit nihil mollitia. Quis possimus ad consequatur adipisci labore doloremque suscipit
+              laudantium
+              exercitationem quisquam!</p>
+          </div>
+        </div>
+
+        <div class="highlights">
+
+          <div class="highlights-image">
+            <img src="assets/highlights/kfever.png" alt="">
+          </div>
+          <div class="highlights-text">
+            <h5>Highlight Name</h5>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum vel facere dolore minima odio pariatur
+              quidem,
+              reprehenderit nihil mollitia. Quis possimus ad consequatur adipisci labore doloremque suscipit
+              laudantium
+              exercitationem quisquam!</p>
+          </div>
+        </div>
+
+        <div class="highlights">
+
+          <div class="highlights-image">
+            <img src="assets/highlights/mbm.jpg" alt="">
+          </div>
+          <div class="highlights-text">
+            <h5>Highlight Name</h5>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum vel facere dolore minima odio pariatur
+              quidem,
+              reprehenderit nihil mollitia. Quis possimus ad consequatur adipisci labore doloremque suscipit
+              laudantium
+              exercitationem quisquam!</p>
+          </div>
+        </div>
+
+        <div class="highlights">
+
+          <div class="highlights-image">
+            <img src="assets/highlights/olympics.jpg" alt="">
+          </div>
+          <div class="highlights-text">
+            <h5>Highlight Name</h5>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum vel facere dolore minima odio pariatur
+              quidem,
+              reprehenderit nihil mollitia. Quis possimus ad consequatur adipisci labore doloremque suscipit
+              laudantium
+              exercitationem quisquam!</p>
+          </div>
+        </div>
+
+        <div class="highlights">
+
+          <div class="highlights-image">
+            <img src="assets/highlights/pba.png" alt="">
+          </div>
+          <div class="highlights-text">
+            <h5>Highlight Name</h5>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum vel facere dolore minima odio pariatur
+              quidem,
+              reprehenderit nihil mollitia. Quis possimus ad consequatur adipisci labore doloremque suscipit
+              laudantium
+              exercitationem quisquam!</p>
+          </div>
         </div>
       </div>
-
-      <div class="highlights">
-
-        <div class="highlights-image">
-          <img src="assets/carousel1.jpg" alt="">
-        </div>
-        <div class="highlights-text">
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum vel facere dolore minima odio pariatur
-            quidem,
-            reprehenderit nihil mollitia. Quis possimus ad consequatur adipisci labore doloremque suscipit laudantium
-            exercitationem quisquam!</p>
-        </div>
-      </div>
-
-      <div class="highlights">
-
-        <div class="highlights-image">
-          <img src="assets/carousel1.jpg" alt="">
-        </div>
-        <div class="highlights-text">
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum vel facere dolore minima odio pariatur
-            quidem,
-            reprehenderit nihil mollitia. Quis possimus ad consequatur adipisci labore doloremque suscipit laudantium
-            exercitationem quisquam!</p>
-        </div>
-      </div>
-
-      <div class="highlights">
-
-        <div class="highlights-image">
-          <img src="assets/carousel1.jpg" alt="">
-        </div>
-        <div class="highlights-text">
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum vel facere dolore minima odio pariatur
-            quidem,
-            reprehenderit nihil mollitia. Quis possimus ad consequatur adipisci labore doloremque suscipit laudantium
-            exercitationem quisquam!</p>
-        </div>
-      </div>
-
-      <div class="highlights">
-
-        <div class="highlights-image">
-          <img src="assets/carousel1.jpg" alt="">
-        </div>
-        <div class="highlights-text">
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum vel facere dolore minima odio pariatur
-            quidem,
-            reprehenderit nihil mollitia. Quis possimus ad consequatur adipisci labore doloremque suscipit laudantium
-            exercitationem quisquam!</p>
-        </div>
-      </div>
-
-      <div class="highlights">
-
-        <div class="highlights-image">
-          <img src="assets/carousel1.jpg" alt="">
-        </div>
-        <div class="highlights-text">
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum vel facere dolore minima odio pariatur
-            quidem,
-            reprehenderit nihil mollitia. Quis possimus ad consequatur adipisci labore doloremque suscipit laudantium
-            exercitationem quisquam!</p>
-        </div>
-      </div>
-
-      <div class="highlights">
-
-        <div class="highlights-image">
-          <img src="assets/carousel1.jpg" alt="">
-        </div>
-        <div class="highlights-text">
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum vel facere dolore minima odio pariatur
-            quidem,
-            reprehenderit nihil mollitia. Quis possimus ad consequatur adipisci labore doloremque suscipit laudantium
-            exercitationem quisquam!</p>
-        </div>
-      </div>
-
-      <div class="highlights">
-
-        <div class="highlights-image">
-          <img src="assets/carousel1.jpg" alt="">
-        </div>
-        <div class="highlights-text">
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum vel facere dolore minima odio pariatur
-            quidem,
-            reprehenderit nihil mollitia. Quis possimus ad consequatur adipisci labore doloremque suscipit laudantium
-            exercitationem quisquam!</p>
-        </div>
-      </div>
-
-      <div class="highlights">
-
-        <div class="highlights-image">
-          <img src="assets/carousel1.jpg" alt="">
-        </div>
-        <div class="highlights-text">
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum vel facere dolore minima odio pariatur
-            quidem,
-            reprehenderit nihil mollitia. Quis possimus ad consequatur adipisci labore doloremque suscipit laudantium
-            exercitationem quisquam!</p>
-        </div>
-      </div>
-
-      <div class="highlights">
-
-        <div class="highlights-image">
-          <img src="assets/carousel1.jpg" alt="">
-        </div>
-        <div class="highlights-text">
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum vel facere dolore minima odio pariatur
-            quidem,
-            reprehenderit nihil mollitia. Quis possimus ad consequatur adipisci labore doloremque suscipit laudantium
-            exercitationem quisquam!</p>
-        </div>
-      </div>
-
     </div>
   </section>
 
 
+  <img onclick="scrollToTop()" class="scrollTop" src="logo.png" alt="">
+  <script src="scripts/animation.js"></script>
 
-
+  <!-- -----------------footer----------------------- -->
   <footer>
     <div class="footer-container">
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis quasi natus, corporis repellat est explicabo,
-        rem ipsum repellendus commodi, facere dolor? Debitis repellat, doloribus obcaecati nam ut quasi libero possimus.
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis quasi natus, corporis repellat est
+        explicabo,
+        rem ipsum repellendus commodi, facere dolor? Debitis repellat, doloribus obcaecati nam ut quasi libero
+        possimus.
       </p>
     </div>
   </footer>
-
-  <script>
-    const slider = document.querySelector('.touristSpots');
-    let isDown = false;
-    let startX;
-    let scrollLeft;
-
-    slider.addEventListener('mousedown', (e) => {
-      isDown = true;
-      slider.classList.add('active');
-      startX = e.pageX - slider.offsetLeft;
-      scrollLeft = slider.scrollLeft;
-    });
-    slider.addEventListener('mouseleave', () => {
-      isDown = false;
-      slider.classList.remove('active');
-    });
-    slider.addEventListener('mouseup', () => {
-      isDown = false;
-      slider.classList.remove('active');
-    });
-    slider.addEventListener('mousemove', (e) => {
-      if (!isDown) return;
-      e.preventDefault();
-      const x = e.pageX - slider.offsetLeft;
-      const walk = (x - startX) * 3; //scroll-fast
-      slider.scrollLeft = scrollLeft - walk;
-      console.log(walk);
-    });
-  </script>
-
 </body>
+
 
 
 </html>
