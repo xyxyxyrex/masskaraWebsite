@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const navBarList = document.getElementById("navBarList");
 
     window.addEventListener("scroll", function () {
-        if (window.scrollY > 500) {
+        if (window.scrollY > 700) {
             // Scrolled down
             navBar.style.transition = "0.2s";
             navBarList.style.color = "white";
